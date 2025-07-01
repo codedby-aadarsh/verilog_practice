@@ -15,7 +15,7 @@ and (OUT,IN1,IN2);// VALID GATE INSTANCE WITHOUT THAT ISNTANCE NAME
 and (OUT,IN1,IN2,IN3); // 3 INPUT AND GATE 
 ```
 
-![and_or truth.png](and_or truth.png)
+![and_or truth.png](andortruth.png)
 
 note - above is the truth table for the and/or types gate and the result evaluated, the gates only computes the output when any of the input changes.
 
@@ -33,7 +33,7 @@ buf b1_2out(OUT1,OUT2,IN);
 not (OUT,IN);//LEGAL ,NO INSTANCE NAME 
 ```
 
-![bufnot truth.png](bufnot truth%202.png)
+![bufnot truth.png](buftruth%202.png)
 
 note - one thing is to be noted the output never evaluates to be z but x (unknown).
 
