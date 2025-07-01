@@ -65,6 +65,11 @@ endmodule
 - **inouts** - internally or externally the inout ports must always be nets or wire.
 - verilog allows the ports to be unconnected and you can connects the internal and external item of different widths.
 
+| type  | input  | output | inout |
+| --- | --- | --- | --- |
+| internal | net | net or reg | net |
+| external | reg/net | net | net  |
+
 ### Connection rules for ports to external signals
 
 1. **connecting by order lis**t : here you have to connect the signals in same orders as they are defined in module defination.
