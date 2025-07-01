@@ -1,3 +1,4 @@
+
 /*🔹 Problem 1: Simple assign statement
 Write a module that declares a 4-bit wire a, assigns it the binary value 1010,
 and uses $display to print its value.*/
