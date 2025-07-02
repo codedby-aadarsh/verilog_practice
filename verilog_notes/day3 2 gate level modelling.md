@@ -22,7 +22,7 @@ note - above is the truth table for the and/or types gate and the result evaluat
 1. **buf/not gates** : these gates have one scalar input and more than one output. and the last terminal in the list is the input in module.
 - two basic gates : buf , not .
 
-![buf_not.png](buf_not%201.png)
+![buf_not.png](buf_not.png)
 
 ```verilog
 //SINGLE OUTPUT
@@ -33,14 +33,14 @@ buf b1_2out(OUT1,OUT2,IN);
 not (OUT,IN);//LEGAL ,NO INSTANCE NAME 
 ```
 
-![bufnot truth.png](buftruth%202.png)
+![bufnot truth.png](buftruth.png)
 
 note - one thing is to be noted the output never evaluates to be z but x (unknown).
 
 - **bufif/notif** : gates with the additional control signal on buf and not ,i.e gate propogates only when there control signal is  asserted.
 - they are instantiated the same way as the other , with the first terminal in the list being output , input and then control signal.
 
-![image.png](bufif%203.png)
+![image.png](bufif.png)
 
 ```verilog
 bufif1 b1(out,in,ctr1);
