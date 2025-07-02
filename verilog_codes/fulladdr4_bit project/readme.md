@@ -57,10 +57,12 @@ Here:
 codes for the implementaion of the 4:1 mux digital circuit is also provided alongside with the stimulus or testbench code.
 
 test_bench code : 
-[testbench or stimulus code for 4 bit full adder](mux4_1_tb.v) 
+[testbench or stimulus code for 4 bit full adder](fulladdr4_tb.v) 
 
 mux 4:1 code : 
-[4bit full adder implementation ](mux4_1.v)
+[4bit full adder implementation ](fulladdr4.v)
+
+
 ---
 
 ### thank you for reading !!
