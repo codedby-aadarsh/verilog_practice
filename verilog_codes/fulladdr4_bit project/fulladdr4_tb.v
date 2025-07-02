@@ -1,5 +1,4 @@
 module stimulus;
-    // input and output variable decalration
     reg [3:0] A,B;
     reg C_IN;
     wire C_OUT;
@@ -8,13 +7,21 @@ module stimulus;
     fullbit4 fa(SUM,C_OUT,A,B,C_IN);
 
     initial begin
-        A=4'b1001;B=4'b1010;C_IN=1;
-        #1 $display("for the A=%b,B=%b and C_IN=%b, the outputs are SUM=%b and C_OUT=%b",A,B,C_IN,SUM,C_OUT);
-    end 
+    $dumpfile("wave.vcd");
+    $dumpvars(0, stimulus);
+
+    // Test 1
+    A = 4'b1001; B = 4'b1010; C_IN = 1;
+    #5;
+
+    // Test 2
+    A = 4'b0000; B = 4'b0001; C_IN = 0;
+    #5;
+
+    // Test 3
+    A = 4'b1111; B = 4'b1111; C_IN = 1;
+    #5;
+
+    $finish;
+end
 endmodule
-        
-        
-
-
-        
-
