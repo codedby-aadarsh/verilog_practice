@@ -4,7 +4,7 @@ module stimulus;
     wire C_OUT;
     wire [3:0] SUM;
 
-    fullbit4 fa(SUM,C_OUT,A,B,C_IN);
+    fulladder fa(SUM,C_OUT,A,B,C_IN);
 
     initial begin
     $dumpfile("wave.vcd");
