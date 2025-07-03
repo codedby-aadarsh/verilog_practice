@@ -15,14 +15,14 @@ and (OUT,IN1,IN2);// VALID GATE INSTANCE WITHOUT THAT ISNTANCE NAME
 and (OUT,IN1,IN2,IN3); // 3 INPUT AND GATE 
 ```
 
-![and_or truth.png](andortruth.png)
+![and_or truth.png](images/andortruth.png)
 
 note - above is the truth table for the and/or types gate and the result evaluated, the gates only computes the output when any of the input changes.
 
 1. **buf/not gates** : these gates have one scalar input and more than one output. and the last terminal in the list is the input in module.
 - two basic gates : buf , not .
 
-![buf_not.png](buf_not.png)
+![buf_not.png](images/buf_not.png)
 
 ```verilog
 //SINGLE OUTPUT
@@ -33,14 +33,14 @@ buf b1_2out(OUT1,OUT2,IN);
 not (OUT,IN);//LEGAL ,NO INSTANCE NAME 
 ```
 
-![bufnot truth.png](buftruth.png)
+![bufnot truth.png](images/buftruth.png)
 
 note - one thing is to be noted the output never evaluates to be z but x (unknown).
 
 - **bufif/notif** : gates with the additional control signal on buf and not ,i.e gate propogates only when there control signal is  asserted.
 - they are instantiated the same way as the other , with the first terminal in the list being output , input and then control signal.
 
-![image.png](bufif.png)
+![image.png](images/bufif.png)
 
 ```verilog
 bufif1 b1(out,in,ctr1);
@@ -95,3 +95,5 @@ and #(2:3:4,3:4:5,4:5:6) (out,i1,i2);
 //note those delays must be specified in the .v file 
 > verilog test.v +mindelays
 ```
+---
+## Thank you for  reading !!

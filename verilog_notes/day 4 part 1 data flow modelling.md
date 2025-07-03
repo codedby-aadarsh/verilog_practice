@@ -62,8 +62,8 @@ assign out =i1&i2;
 ---
 
 ## Types of operators
-![operator types-1](operator1.png)
-![operator types-2](operator2.png)
+![operator types-1](images/operator1.png)
+![operator types-2](images/operator2.png)
 
 ---
 ## Use cases of the operators 

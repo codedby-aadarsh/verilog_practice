@@ -8,13 +8,13 @@
 - a module contains the name of the module , list of the input and output ports and inside it contains the implemention of the logic.
 - A module always start with the keyword module and ends with the keyword endmodule.
 
-![image.png](image.png)
+![image.png](images/image.png)
 
 - so apart from the module, endmodule and module name everything is optional. Inside the module block we have variable declaration ,data flow statements ,instantiation of other module and behavioural statements etc, that make things work.
 
 example- 
 
-![image.png](image%201.png)
+![image.png](images/image%201.png)
 
 ```verilog
 module sr_latch(Q,Qbar,Sbar,Rbar);
@@ -58,7 +58,7 @@ endmodule
 
 ### Port decalration rules :
 
-![image.png](image%202.png)
+![image.png](images/image%202.png)
 
 - **inputs** - internally input ports must be of the type net. externally the inputs can be connected to a reg or net.
 - **ouputs** - internally output can be of type wire or reg. externally outputs must be always connected to a net, the reason is that net or wire are continously changing and reg is used to hold a value. so you cant have your output to be a reg.
@@ -138,3 +138,6 @@ fulladd4 fa_byname(.C_OUT(c_out),.C_IN(c_in),.SUM(sum),.A(a),.B(b));
         $display("%m: value = %b", stimulus.m1.Q);
         // may print: stimulus.m1.Q: value = 1
         ```
+
+---
+## Thank you for reading !!

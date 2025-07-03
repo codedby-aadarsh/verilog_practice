@@ -14,7 +14,7 @@ value set tells us the value a data type can take or a range.
 | x | represents an unknown logic value (can be zero or one) |
 | z | represents a high-impedance state or floating  |
 
-![image.png](626ba651-47cc-4dde-8e21-a75e8a23ec2e.png)
+![image.png](images/626ba651-47cc-4dde-8e21-a75e8a23ec2e.png)
 
 - while X or x represent unknown , it may be either 0 or 1 and in boolean logic it means “dont care”.
 - Z or z denotes the high impedance state and represnt a incomplete connection or any unconnected wire will simply results in high impedance state.
@@ -109,3 +109,6 @@ escape_characters               charcters displayed
 			\t                            tab
 			%%                            %
 ```
+
+---
+## Thank you for reading !!
