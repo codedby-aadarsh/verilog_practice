@@ -77,4 +77,29 @@ end
 always @(recieved_data)//awaits for the triggering of event
 data_buf={data_pkt[0],data_pkt[1],data_pkt[2],data_pkt[3]};//when triggering happens store four packet of recieved data in the data buffer 
 ```
-3. **Event OR control** :
+3. **Event OR control** :In this control , changes in any one of the multiple signals or events triggers a block of statements, and the list of signals and events are seperated by OR, that list is also referred as sensitivity list.
+```verilog
+always @(reset or d or clock)
+begin 
+    if (reset)
+        q=1'b0;
+    else  if (clock)
+        q=d;
+end 
+```
+4. **Level-sensitive timing control**:
+```verilog 
+always 
+    wait(count_enable) #20 count= count +1;
+```
+- in the above code, the value of the count_enable is monitor continously, if the count_enable is 0, the statement doesnt executed, but when it is 1, then the count is incremented after the 20 time unit and if the count_enable stays 1, then the count is incremented every 20 time units.
+
+**Notes**
+
+-The delay value can be a constant, variable, or expression.
+
+-If the delay evaluates to x or z, it is treated as zero.
+
+-Negative delays are interpreted as unsigned 2’s complement values.
+
+## Thank you for reading !!
