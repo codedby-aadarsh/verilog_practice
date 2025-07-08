@@ -2,6 +2,7 @@
 - There is a necessity of the timing control statements in verilog , as they specify the simulation time at which  the procedural statements will execute and without it the simulation time doesnt advances.
 
 - There are generally three methods of timing control,which are :
+---
 ## **Delay based timing control** 
 - This statment in verilog in an expression specifies the time duration between when the statement is encountered and when it is executed. This delay are specified by the symbol # and value suceeding it.
 - there are three type of delay control for procedural assignments
@@ -50,7 +51,7 @@ end
 
 ```
 - so as above we have two initial block and if we dont use the zero delay control statement, then the x and y can be either 0 or 1 i.e which block statement is executed first is non deterministic, but with the zero delay timing control we can ensure that x and y will have the value 1 and this statement will be executed at last but the execution happens at the same time 0 and if we have too many zero delay control statement it makes then the order non determinsitic ,its not  advisible to have many zero delay statements.
-
+---
 ## Event based timing control :
 - So an event is like some special condition, like the change in the value on a register or a net. they can be utilzed to trigger execution of a statement or block of statements.
 - there are four types of the event based timing control :
@@ -95,7 +96,6 @@ always
 - in the above code, the value of the count_enable is monitor continously, if the count_enable is 0, the statement doesnt executed, but when it is 1, then the count is incremented after the 20 time unit and if the count_enable stays 1, then the count is incremented every 20 time units.
 
 **Notes**
-
 -The delay value can be a constant, variable, or expression.
 
 -If the delay evaluates to x or z, it is treated as zero.
