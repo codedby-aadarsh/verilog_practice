@@ -101,4 +101,58 @@ begin
     forever #10 clock = ~clock; // clock toggles every 10 units
 end
 ```
+# Blocking statements 
+- In the modules we have used the begin and end keyword to group multiple statemenst into one, and so there are two types of blocks in verilog.
+
+1. **sequential block**- This block uses the begin and end keyword ,this type of the block statements are executed in the order in which they are written.
+```verilog
+module design0;
+	bit [31:0] data;
+
+	// "initial" block starts at time 0
+	initial begin
+
+		// After 10 time units, data becomes 0xfe
+		#10   data = 8'hfe;
+		$display ("[Time=%0t] data=0x%0h", $time, data);
+
+		// After 20 time units, data becomes 0x11
+		#20   data = 8'h11;
+		$display ("[Time=%0t] data=0x%0h", $time, data);
+	end
+endmodule
+//in above block each statements waits for there turn and are executed sequentially so the above block takes 30 time unit for the execution.
+```
+2. **Parallel blocking** - This block uses the keyword fork and join , this type of block statements are all executed concurrently.
+
+```verilog 
+initial begin
+	#10   data = 8'hfe;
+	fork
+	   #20 data = 8'h11;
+	   #10 data = 8'h00;
+	join
+end
+// so in this block the both statements runs parallely, if it was a sequential block, then those two parallel statements could have taken 30 time unit to execute but as it isnt so it takes the 20 times unit to execute the statements inside the fork and join
+```
+
+## Features of the block statemens 
+```verilog 
+initial begin: block0
+	#10   data = 8'hfe; // as in this example the parallel and serial blocks can be nested.( property 1 - nested block)s
+	fork: block1 // you can name block and with the naming you can acess the variables inside it by hieharchical naming.(property-2)
+	   #20 data = 8'h11;
+	   #10 data = 8'h00;
+       disable block1 //named block can be disabled too!!(property-3)
+	join
+end
+
+```
+**Property or features**
+> 1. nesting of parallel and sequential blocks
+> 2. naming the blocks and using hieharchical refercing for acessing the local variable of the block
+> 3. disabling the naming blocks.
+
+---
+
 # Thank you for reading !!
