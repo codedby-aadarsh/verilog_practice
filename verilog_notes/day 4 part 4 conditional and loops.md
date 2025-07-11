@@ -102,9 +102,9 @@ begin
 end
 ```
 # Blocking statements 
-- In the modules we have used the begin and end keyword to group multiple statemenst into one, and so there are two types of blocks in verilog.
+- In the modules we have used the `begin` and `end` keyword to group multiple statemenst into one, and so there are two types of blocks in verilog.
 
-1. **sequential block**- This block uses the begin and end keyword ,this type of the block statements are executed in the order in which they are written.
+1. **sequential block**- This block uses the `begin` and `end` keyword ,this type of the block statements are executed in the order in which they are written.
 ```verilog
 module design0;
 	bit [31:0] data;
@@ -123,7 +123,7 @@ module design0;
 endmodule
 //in above block each statements waits for there turn and are executed sequentially so the above block takes 30 time unit for the execution.
 ```
-2. **Parallel blocking** - This block uses the keyword fork and join , this type of block statements are all executed concurrently.
+2. **Parallel blocking** - This block uses the keyword `fork` and `join` , this type of block statements are all executed concurrently.
 
 ```verilog 
 initial begin
